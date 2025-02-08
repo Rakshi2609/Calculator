@@ -1,0 +1,173 @@
+.heading{
+    justify-content: space-between;
+    height:10vh;
+    background-color: #045e76;
+    box-shadow: 0px 3px 40px rgb(11, 144, 206);
+}
+
+.header-left{
+    margin-left: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hamburger{
+    visibility: hidden;
+}
+
+.close{
+    visibility: hidden;
+}
+.header-right > ul{
+    justify-content: space-around;
+    gap:43px;
+    margin-top: 13px;
+    margin-right: 2.9vh;
+    align-items: center;
+}
+
+.header-right > ul >li{
+    font-size: 21px;
+    color: cyan;
+}
+
+.header-right > ul >li :hover {
+    text-decoration: underline;
+    font-weight: 600;
+    color: rgba(230, 214, 214, 0.822);
+    scale: 1.02;
+} 
+.header-right{
+    visibility: visible;
+}
+
+.container{
+    height:85vh;
+    margin: 10vh 25vh;
+}
+
+.screen{
+    margin: 15px;
+    height: 10vh;
+    width: 97%;
+    background-color: #0d1132;
+}
+
+.lower-box{
+    height: 56vh;
+    width:100%;
+}
+
+.mid > div{
+    width:50%;
+    margin: 8px;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    width:150%;
+    gap:15px;
+
+}
+
+.output{
+    text-align: right;
+    font-size: 51px;
+    color: cyan;
+}
+
+.operations{
+    height: 13vh;
+    width:100%;
+    gap:15px;
+}
+
+.number{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 51px;
+    color: cyan;
+}
+
+.number:hover{
+    box-shadow: 0px 0px 12px rgb(210, 14, 181),
+    0px 0px 24px rgb(210, 14, 181),
+    0px 0px 28px rgb(210, 14, 181);
+    transform: scale(1.05);
+}
+
+.diaply{
+    display: flex;
+    align-items: center;
+    font-size: 41px;
+    color: cyan;
+}
+
+.direction{
+    justify-content: center;
+    align-items: center;
+}
+
+.shadow{
+    box-shadow: 0px 0px 12px rgb(210, 14, 181),
+                0px 0px 24px rgb(210, 14, 181),
+                0px 0px 28px rgb(210, 14, 181);
+}
+
+.shadow:hover{
+    box-shadow: 0px 0px 12px cyan,
+                0px 0px 24px cyan,
+                0px 0px 28px cyan;
+}
+
+@media (max-width: 500px){
+    .container{
+        margin: 15px 35px;
+        height: 100vh;
+        margin-top: 50px;
+    }
+    .close{
+        visibility: hidden;
+    }
+    
+    /* .close{
+        visibility: visible;
+
+    } */
+    
+    .hamburger{
+        visibility: visible;
+        margin-right: -400px;
+        margin-top: 20px;
+
+    }
+    .header-right{
+        background-image: url(../images/yellow.png);
+       /* position: absolute;  */
+       /* left:53%; */
+       /* left:203%; */
+       visibility: hidden;
+        height: 667px;
+        z-index: 1;
+        padding: 38px;
+        /* overflow-x: hidden; */
+        transition: all 0.25s ease-in-out;
+    }
+    .header-right > ul{
+        flex-direction: column;
+        
+    }
+    .header-right > ul >li :hover{
+        color: red;
+        
+    }
+    .heading{
+        background-color: yellow;
+    }
+    .output{
+        width:92%;
+    }
+}
