@@ -177,10 +177,6 @@ Contributions are welcome! Here's how you can help:
 - Maintain responsive design principles
 - Update documentation for new features
 
-## 📝 License
-
-This project is open source and available under the [MIT License](LICENSE).
-
 ## 🏆 Acknowledgments
 
 - **Glassmorphism Design**: Inspired by modern UI/UX trends
