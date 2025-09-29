@@ -8,57 +8,48 @@
     <link rel="stylesheet" href="css/utility.css" />
   </head>
   <body>
-    <header>
-      <div class="heading  flex">
-        <div class="header-left ">
-          <img id="glow" src="images/logo.svg" style="height: 7vh" alt="Calculator" />
-          
-        </div>
-        <div class="hamburger">
-          <img src="images/hamburger.svg" alt="">
-        </div>
-        <div class="header-right flex">
-          <div class="close">
-          <img src="images/close.svg"></div>
-          <ul class="flex">
-            <li><a>Home</a></li>
-            <li><a>Other Work</a></li>
-            <li><a>About Me</a></li>
-            <li><a>Document</a></li>
-            <li><a>Contact Me</a></li>
-          </ul>
-        </div>
-      </div>
-    </header>
     <main>
-      <div class="container  shadow">
-        <input type="text" class="screen border-1 shadow display output">
-        <div class="flex direction">
+      <div class="cursor-tracker" id="cursorTracker"></div>
+      <div class="cursor-glow" id="cursorGlow"></div>
+      <div class="sexy-bg">
+        <div class="particles-container" id="particles"></div>
+        <div class="animated-bg"></div>
+      </div>
+      <div class="calculator-layout">
+        <div class="history-left glass" id="historyLeft">
+          <h3>Saved History</h3>
+          <div class="history-items" id="savedHistory"></div>
+        </div>
+        
+        <div class="container shadow glass">
+          <input type="text" class="screen border-1 shadow display output glass" readonly>
+          <div class="flex direction">
           <div class="operations flex border mid">
-            <div class="number border equal">=</div>
-            <div class="number border clear">Clear</div>
+            <div class="number border equal glass" title="Press Enter or =">=</div>
+            <div class="number border clear glass" title="Press Escape or C">Clear</div>
           </div>
           <div class="lower-box border flex">
             <div class="grid border">
-              <div class="number border seven">7</div>
-              <div class="number border eigth">8</div>
-              <div class="number border nine">9</div>
-              <div class="number border addition">+</div>
-              <div class="number border four">4</div>
-              <div class="number border five">5</div>
-              <div class="number border six">6</div>
-              <div class="number border subtraction">-</div>
-              <div class="number border one">1</div>
-              <div class="number border two">2</div>
-              <div class="number border three">3</div>
-              <div class="number border multiplication">*</div>
-              <div class="number border twozero">00</div>
-              <div class="number border onezero">0</div>
-              <div class="number border point">.</div>
-            <div class="number border division">/</div>
+              <div class="number border seven glass" title="Press 7">7</div>
+              <div class="number border eigth glass" title="Press 8">8</div>
+              <div class="number border nine glass" title="Press 9">9</div>
+              <div class="number border addition glass" title="Press +">+</div>
+              <div class="number border four glass" title="Press 4">4</div>
+              <div class="number border five glass" title="Press 5">5</div>
+              <div class="number border six glass" title="Press 6">6</div>
+              <div class="number border subtraction glass" title="Press -">-</div>
+              <div class="number border one glass" title="Press 1">1</div>
+              <div class="number border two glass" title="Press 2">2</div>
+              <div class="number border three glass" title="Press 3">3</div>
+              <div class="number border multiplication glass" title="Press *">*</div>
+              <div class="number border twozero glass" title="Press 00">00</div>
+              <div class="number border onezero glass" title="Press 0">0</div>
+              <div class="number border point glass" title="Press .">.</div>
+              <div class="number border division glass" title="Press /">/</div>
             </div>
           </div>
         </div>
+      </div>
     </main>
     <script src="js/script.js"></script>
   </body>
