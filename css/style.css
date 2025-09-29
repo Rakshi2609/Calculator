@@ -112,6 +112,126 @@ body {
     padding: 20px;
 }
 
+/* Calculator Header */
+.calculator-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.games-toggle {
+    background: linear-gradient(135deg, #ff00cc, #333399);
+    border: none;
+    border-radius: 12px;
+    width: 50px;
+    height: 50px;
+    font-size: 1.5rem;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(255,0,204,0.3);
+}
+
+.games-toggle:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(255,0,204,0.5);
+}
+
+/* Games Panel */
+.games-panel {
+    width: 320px;
+    height: 500px;
+    padding: 20px;
+    display: none;
+    flex-direction: column;
+    background: rgba(255,255,255,0.1);
+    overflow: hidden;
+}
+
+.games-panel.show {
+    display: flex;
+    animation: slideInRight 0.3s ease;
+}
+
+.games-panel h3 {
+    color: #fff;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.game-selection {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.game-btn {
+    background: rgba(255,255,255,0.12);
+    border: 1px solid rgba(255,255,255,0.18);
+    border-radius: 12px;
+    padding: 15px 10px;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+.game-btn:hover {
+    background: linear-gradient(135deg, #ff00cc30, #33339930);
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(255,0,204,0.3);
+}
+
+.game-area {
+    flex: 1;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.game-area.active {
+    display: flex;
+}
+
+#gameCanvas {
+    background: rgba(0,0,0,0.3);
+    border-radius: 12px;
+    border: 2px solid rgba(255,255,255,0.2);
+}
+
+.game-controls {
+    display: flex;
+    gap: 10px;
+}
+
+.control-btn {
+    background: rgba(255,255,255,0.12);
+    border: 1px solid rgba(255,255,255,0.18);
+    border-radius: 8px;
+    padding: 8px 12px;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 0.8rem;
+}
+
+.control-btn:hover {
+    background: linear-gradient(135deg, #ff00cc30, #33339930);
+    transform: scale(1.05);
+}
+
+@keyframes slideInRight {
+    from { transform: translateX(100%); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
 /* Glass effect */
 .glass {
     background: rgba(255,255,255,0.08);
@@ -188,13 +308,11 @@ body {
 
 /* Calculator Screen */
 .screen{
-    margin: 15px;
-    height: 60px;
-    width: 95%;
-    max-width: 350px;
+    height: 50px;
+    flex: 1;
     background: rgba(0,0,0,0.4);
     color: #fff;
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     border-radius: 12px;
     box-shadow: 0 2px 16px 0 rgba(31, 38, 135, 0.37);
     padding: 0 15px;
@@ -386,10 +504,15 @@ body {
         margin: 0 auto;
     }
     
-    .history-left {
+    .history-left, .games-panel {
         width: 95%;
-        height: 250px;
+        height: 300px;
         margin: 0 auto;
+    }
+    
+    #gameCanvas {
+        width: 250px;
+        height: 200px;
     }
     
 

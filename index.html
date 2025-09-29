@@ -21,8 +21,28 @@
           <div class="history-items" id="savedHistory"></div>
         </div>
         
+        <div class="games-panel glass" id="gamesPanel">
+          <h3>🎮 Mini Games</h3>
+          <div class="game-selection">
+            <button class="game-btn" onclick="startGame('maze')">🔲 Maze</button>
+            <button class="game-btn" onclick="startGame('flappy')">🐦 Flappy</button>
+            <button class="game-btn" onclick="startGame('snake')">🐍 Snake</button>
+            <button class="game-btn" onclick="startGame('pong')">🏓 Pong</button>
+          </div>
+          <div class="game-area" id="gameArea">
+            <canvas id="gameCanvas" width="300" height="400"></canvas>
+            <div class="game-controls">
+              <button class="control-btn" onclick="closeGame()">❌ Close</button>
+              <button class="control-btn" onclick="restartGame()">🔄 Restart</button>
+            </div>
+          </div>
+        </div>
+        
         <div class="container shadow glass">
-          <input type="text" class="screen border-1 shadow display output glass" readonly>
+          <div class="calculator-header">
+            <input type="text" class="screen border-1 shadow display output glass" readonly>
+            <button class="games-toggle" onclick="toggleGames()" title="Toggle Games">🎮</button>
+          </div>
           <div class="flex direction">
           <div class="operations flex border mid">
             <div class="number border equal glass" title="Press Enter or =">=</div>
