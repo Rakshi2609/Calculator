@@ -1,4 +1,4 @@
-# 🧮✨ Sexy Glassmorphism Calculator with Crazy Games
+# 🧮✨ Glassmorphism Calculator with Crazy Games
 
 A stunning modern calculator featuring glassmorphism design effects, animated backgrounds, custom cursor tracking, and an incredible collection of minimalistic games including maze, crazy Flappy Bird, snake, and Pong.
 
